@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/95a7be47-124d-4ffe-8d15-c21b6fbcff24/deploy-status)](https://app.netlify.com/sites/tulana/deploys)
+
 # PriceCompare
 
 Compare Price of different products of same kind
