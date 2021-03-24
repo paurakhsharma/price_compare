@@ -2,6 +2,8 @@
 
 Compare Price of different products of same kind
 
+<img src="./screenshots/Screenshot_1616600422.png">
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

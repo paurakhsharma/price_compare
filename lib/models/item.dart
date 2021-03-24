@@ -6,25 +6,22 @@ class Product {
   final double quantiy;
   final double price;
   final Color color;
-  final String name;
   Product({
     required this.quantiy,
     required this.price,
     required this.color,
-    required this.name,
   });
+  
 
   Product copyWith({
     double? quantiy,
     double? price,
     Color? color,
-    String? name,
   }) {
     return Product(
       quantiy: quantiy ?? this.quantiy,
       price: price ?? this.price,
       color: color ?? this.color,
-      name: name ?? this.name,
     );
   }
 
@@ -33,7 +30,6 @@ class Product {
       'quantiy': quantiy,
       'price': price,
       'color': color.value,
-      'name': name,
     };
   }
 
@@ -42,7 +38,6 @@ class Product {
       quantiy: map['quantiy'],
       price: map['price'],
       color: Color(map['color']),
-      name: map['name'],
     );
   }
 
@@ -51,9 +46,7 @@ class Product {
   factory Product.fromJson(String source) => Product.fromMap(json.decode(source));
 
   @override
-  String toString() {
-    return 'Product(quantiy: $quantiy, price: $price, color: $color, name: $name)';
-  }
+  String toString() => 'Product(quantiy: $quantiy, price: $price, color: $color)';
 
   @override
   bool operator ==(Object other) {
@@ -62,15 +55,9 @@ class Product {
     return other is Product &&
       other.quantiy == quantiy &&
       other.price == price &&
-      other.color == color &&
-      other.name == name;
+      other.color == color;
   }
 
   @override
-  int get hashCode {
-    return quantiy.hashCode ^
-      price.hashCode ^
-      color.hashCode ^
-      name.hashCode;
-  }
+  int get hashCode => quantiy.hashCode ^ price.hashCode ^ color.hashCode;
 }

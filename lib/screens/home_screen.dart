@@ -16,13 +16,11 @@ class _HomeScreenState extends State<HomeScreen> {
       quantiy: 0,
       price: 0,
       color: Colors.accents[0],
-      name: '',
     ),
     Product(
       quantiy: 0,
       price: 0,
       color: Colors.accents[1],
-      name: '',
     )
   ];
 
@@ -52,21 +50,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           final product = _products[index];
                           return ListTile(
                             tileColor: product.color,
-                            leading: SizedBox(
-                              width: width * 0.33,
-                              child: TextField(
-                                onChanged: (value) {
-                                  _products[index] =
-                                      _products[index].copyWith(name: value);
-                                  _calculated = false;
-                                  setState(() {});
-                                },
-                                style: TextStyle(color: Colors.white),
-                                decoration: InputDecoration(
-                                  prefix: Text('Name: '),
-                                  hintText: 'Name',
-                                  hintStyle: TextStyle(color: Colors.grey[200]),
-                                ),
+                            leading: Text(
+                              'Product ${index + 1}',
+                              style: TextStyle(
+                                color: Colors.white,
                               ),
                             ),
                             title: SizedBox(
@@ -129,10 +116,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               ? () {
                                   _products.add(
                                     Product(
-                                        quantiy: 0,
-                                        price: 0,
-                                        color: Colors.accents[_products.length],
-                                        name: ''),
+                                      quantiy: 0,
+                                      price: 0,
+                                      color: Colors.accents[_products.length],
+                                    ),
                                   );
                                   _calculated = false;
                                   setState(() {});
@@ -182,10 +169,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       itemBuilder: (context, index) {
                         final product = _products[index];
                         return ListTile(
-                          leading: Text(
-                            product.name,
+                          title: Text(
+                            'Product ${index + 1}',
                             style: TextStyle(
-                              fontSize: 16,
                               color: Colors.white,
                             ),
                           ),
