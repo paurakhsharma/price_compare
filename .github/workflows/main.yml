@@ -28,7 +28,7 @@ jobs:
         git init
         git config user.name  "paurakhsharma"
         git config user.email "paurakh011@gmail.com"
-        git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/paurakhsharma/bibliaapi_flutter.git
+        git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/paurakhsharma/price_compare.git
         git checkout -b gh-pages
         git add .
         git commit -m "Updated docs"
