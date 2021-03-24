@@ -1,6 +1,6 @@
-# pricecompare
+# PriceCompare
 
-A new Flutter project.
+Compare Price of different products of same kind
 
 ## Getting Started
 
